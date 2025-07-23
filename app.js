@@ -35,10 +35,10 @@ function isAdult(age) {
     if (age >= 18) {
         return 'Adult'
     } else if (
-       age <= 18) {
+        age < 18) {
         return 'Minor'
-       } _
-    }
+    } _
+}
 
 console.log('Exercise 2 Result:', isAdult(21));
 
@@ -58,7 +58,7 @@ Complete the exercise in the space below:
 */
 
 function isCharAVowel(char) {
-    if (char = 'a' || 'e' ||'i' || 'o' || 'u') {
+    if (char = 'a' || 'e' || 'i' || 'o' || 'u') {
         return true
     } else {
         return false
@@ -115,7 +115,7 @@ Example: maxOfThree(17, 4, 9) should return 17.
 Complete the exercise in the space below:
 */
 
-function maxOfThree(x, y, z){
+function maxOfThree(x, y, z) {
     let largest = x;
     if (y > largest) {
         largest = y;
@@ -140,7 +140,7 @@ Complete the exercise in the space below:
 */
 
 function calculateTip(bill, tip) {
-     amount = bill * tip/100; {
+    amount = bill * tip / 100; {
         return amount
     }
 }
@@ -163,9 +163,9 @@ Complete the exercise in the space below:
 
 function convertTemperature(temprature, scale) {
     if (scale === 'C') {
-        return (temprature * 9/5) + 32;
+        return (temprature * 9 / 5) + 32;
     } else if (scale === 'F') {
-        return (temprature - 32) * 5/9;
+        return (temprature - 32) * 5 / 9;
     }
 }
 
@@ -189,7 +189,7 @@ Complete the exercise in the space below:
 
 function basicCalculator(x, y, operation) {
     if (operation === 'add') {
-        return x + y; 
+        return x + y;
     } else if (operation === 'subtract') {
         return x - y;
     } else if (operation === 'multiply') {
