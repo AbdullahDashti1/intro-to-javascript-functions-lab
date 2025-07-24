@@ -58,7 +58,7 @@ Complete the exercise in the space below:
 */
 
 function isCharAVowel(char) {
-    if (char = 'a' || 'e' || 'i' || 'o' || 'u') {
+    if (char === 'a' || 'e' || 'i' || 'o' || 'u') {
         return true
     } else {
         return false
@@ -81,7 +81,7 @@ Complete the exercise in the space below:
 */
 
 function generateEmail(name, domain) {
-    return `${name}${'@'}${domain}`;
+    return `${name}@${domain}`;
 }
 
 console.log('Exercise 4 Result:', generateEmail("johnsmith", "example.com"));
@@ -119,8 +119,13 @@ function maxOfThree(x, y, z) {
     let largest = x;
     if (y > largest) {
         largest = y;
-    } else if (z > largest) {
+    } else {
+        largest = x;
+    }
+    if (z > largest) {
         largest = z;
+    } else {
+        largest = y;
     }
     return largest;
 }
@@ -194,8 +199,10 @@ function basicCalculator(x, y, operation) {
         return x - y;
     } else if (operation === 'multiply') {
         return x * y;
-    } else if (operation === 'divide') {
+    } else if ((operation === 'divide') && (x !== 0 && y !== 0)) {
         return x / y;
+    } else {
+        return "Error with operands/operation";
     }
 }
 
@@ -225,7 +232,7 @@ function calculateGrade(grade) {
         return 'C';
     } else if ((grade >= 60 && grade <= 69)) {
         return 'D';
-    } else {
+    } else if (grade >= 0 && grade <= 59) {
         return 'F';
     }
 }
